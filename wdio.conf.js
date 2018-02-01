@@ -22,7 +22,7 @@ exports.config = {
     // directory is where your package.json resides, so `wdio` will be called from there.
     //
     specs: [
-        './tests/*.js'
+        './tests/page-url-hash.js'
     ],
     // Patterns to exclude.
     exclude: [
@@ -57,7 +57,8 @@ exports.config = {
         //maxInstances: 5,
         //
       {browserName: 'firefox', platform: 'Windows 10', version: '41.0'},
-      {browserName: 'chrome', platform: 'OS X 10.10', version: '45.0'},
+      {browserName: 'chrome', platform: 'OS X 10.10', version: '63.0'},
+      {browserName: 'chrome', platform: 'OS X 10.10', version: '64.0'},
       {browserName: 'internet explorer', platform: 'Windows 7', version: '10'}
     ],
     //
