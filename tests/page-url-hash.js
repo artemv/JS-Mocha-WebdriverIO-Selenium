@@ -6,7 +6,7 @@ describe('urls with hashes', function() {
     const hash2 = '#Model-View-separation';
     const url2 = `${baseUrl}${hash2}`;
 
-    afterEach(function() {
+    beforeEach(function() {
         browser.url('http://google.com');
     });
 
