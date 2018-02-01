@@ -144,7 +144,9 @@ exports.config = {
 
     mochaOpts: {
         ui: 'bdd'
+        timeout: argv.mochaOpts.timeout || 1 * 60 * 1000,
     },
+
     // =====
     // Hooks
     // =====
