@@ -58,7 +58,7 @@ exports.config = {
         //
       {browserName: 'firefox', platform: 'Windows 10', version: '41.0'},
       {browserName: 'chrome', platform: 'OS X 10.10', version: '63.0'},
-      {browserName: 'chrome', platform: 'OS X 10.10', version: '64.0'},
+      {browserName: 'chrome', platform: 'OS X 10.10', version: '64.0', chromedriverVersion: '2.33'},
       {browserName: 'internet explorer', platform: 'Windows 7', version: '10'}
     ],
     //
