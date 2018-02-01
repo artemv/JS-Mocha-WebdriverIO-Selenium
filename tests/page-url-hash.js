@@ -1,7 +1,7 @@
 const expect = require('chai').expect;
 
 const baseUrl = 'http://backbonejs.org/';
-const url1 = `http://google.com`;
+const url1 = `https://www.wikipedia.org/`;
 const hash2 = '#Model-View-separation';
 const url2 = `${baseUrl}${hash2}`;
 
@@ -20,6 +20,7 @@ describe('urls with hashes', function() {
     it('hash-only change works via JS', function() {
         browser.url(url1);
         expect(browser.getUrl()).to.equal(url1);
+        browser.url(baseUrl);
         browser.execute(function (hash) {
             location.hash = hash;
         }, hash2);
