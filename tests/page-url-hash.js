@@ -6,6 +6,10 @@ describe('urls with hashes', function() {
     const hash2 = '#Model-View-separation';
     const url2 = `${baseUrl}${hash2}`;
 
+    afterEach(function() {
+        browser.url('http://google.com');
+    });
+
     it('hash-only change works via browser.url', function() {
         browser.url(url1);
         expect(browser.getUrl()).to.equal(url1);
