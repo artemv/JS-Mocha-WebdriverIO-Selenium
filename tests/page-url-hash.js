@@ -10,7 +10,7 @@ describe('urls with hashes', function() {
         browser.url(otherPathUrl);
     });
 
-    it('hash-only change works via browser.url', function() {
+    xit('hash-only change works via browser.url', function() {
         browser.url(baseUrl);
         expect(browser.getUrl()).to.equal(baseUrl);
         browser.url(url2);
