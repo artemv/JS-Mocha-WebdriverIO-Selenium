@@ -1,24 +1,25 @@
 const expect = require('chai').expect;
 
 const baseUrl = 'http://backbonejs.org/';
-const url1 = `${baseUrl}#Getting-started`;
+const url1 = `http://google.com`;
 const hash2 = '#Model-View-separation';
 const url2 = `${baseUrl}${hash2}`;
 
-describe('hash-only change works via browser.url', function() {
-    it('works1', function() {
-        browser.url(baseUrl);
-        expect(browser.getUrl()).to.equal(baseUrl);
+describe('urls with hashes', function() {
+    afterEach(function() {
+        browser.url(url1);
+    });
+
+    it('hash-only change works via browser.url', function() {
+        browser.url(url1);
+        expect(browser.getUrl()).to.equal(url1);
         browser.url(url2);
         expect(browser.getUrl()).to.equal(url2);
     });
 
-});
-
-describe('hash-only change works via JS', function() {
-    it('works2', function () {
-        browser.url(baseUrl);
-        expect(browser.getUrl()).to.equal(baseUrl);
+    it('hash-only change works via JS', function() {
+        browser.url(url1);
+        expect(browser.getUrl()).to.equal(url1);
         browser.execute(function (hash) {
             location.hash = hash;
         }, hash2);
