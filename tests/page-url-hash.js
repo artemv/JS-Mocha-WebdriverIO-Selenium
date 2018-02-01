@@ -17,7 +17,7 @@ describe('urls with hashes', function() {
     it('hash-only change works via JS', function() {
         browser.url(url1);
         expect(browser.getUrl()).to.equal(url1);
-        browser.execute(() => location.hash = hash, hash2);
+        browser.execute((hash) => location.hash = hash, hash2);
         expect(browser.getUrl()).to.equal(url2);
     });
 });
