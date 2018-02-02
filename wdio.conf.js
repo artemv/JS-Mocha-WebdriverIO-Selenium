@@ -133,7 +133,7 @@ exports.config = {
     // The only one supported by default is 'dot'
     // see also: http://webdriver.io/guide/testrunner/reporters.html
     // reporters: ['dot'],
-    reporters: ['dot'],
+    reporters: ['spec'],
     reporterOptions: {
         outputDir: './'
     },
